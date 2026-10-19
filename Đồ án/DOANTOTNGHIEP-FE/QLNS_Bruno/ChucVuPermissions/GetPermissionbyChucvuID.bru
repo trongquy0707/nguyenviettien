@@ -1,0 +1,19 @@
+meta {
+  name: GetPermissionbyChucvuID
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{localhost_QLNS}}/api/admin/ChucVuPermission/GetPermissionbyChucVuID/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 2e944369-5be5-409d-9bbb-316b103da0a0
+}
+
+settings {
+  encodeUrl: true
+}

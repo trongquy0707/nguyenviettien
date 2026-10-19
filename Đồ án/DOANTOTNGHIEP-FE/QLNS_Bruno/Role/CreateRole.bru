@@ -1,0 +1,22 @@
+meta {
+  name: CreateRole
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{localhost_QLNS}}/api/Role/AddRole
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "tenQuyen": "Client",
+    "moTa": "Người dùng "
+  }
+}
+
+settings {
+  encodeUrl: true
+}

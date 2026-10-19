@@ -1,0 +1,20 @@
+meta {
+  name: GetAllhopDong
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{localhost_QLNS}}/api/admin/HopDong/GetAllHopDong
+  body: none
+  auth: inherit
+}
+
+params:query {
+  : 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

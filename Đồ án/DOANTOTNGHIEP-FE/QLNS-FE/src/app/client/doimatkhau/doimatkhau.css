@@ -1,0 +1,315 @@
+/* Re-use các biến từ :root của profile.css */
+:root {
+  --primary-color: #3f87f5;
+  --accent-color: #5cb85c;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --card-bg: #ffffff;
+  --border-color-light: #eeeeee;
+  --bg-page: #f9fafb;
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
+  --border-radius-base: 6px;
+  --font-family-base: "Roboto", sans-serif;
+}
+
+/* Phần bao ngoài trang */
+.change-password-page-wrapper {
+  background-color: var(--bg-page);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+}
+
+/* Khu vực nội dung đổi mật khẩu */
+.change-password-content-area {
+  width: 100%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  flex: 1;
+  border: 1px solid #dee2e6;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) var(--border-color-light);
+}
+
+.change-password-content-area::-webkit-scrollbar {
+  width: 8px;
+}
+
+.change-password-content-area::-webkit-scrollbar-track {
+  background: var(--border-color-light);
+  border-radius: 10px;
+}
+
+.change-password-content-area::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  border: 2px solid var(--bg-page);
+}
+
+/* Card đổi mật khẩu */
+.change-password-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius-base);
+  box-shadow: 0 2px 10px var(--shadow-light);
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
+              linear-gradient(45deg, rgba(63, 135, 245, 0.1), rgba(92, 184, 92, 0.1)) border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header của card */
+.change-password-card .card-header {
+  background: linear-gradient(90deg, var(--card-bg) 0%, rgba(63, 135, 245, 0.05) 100%);
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color-light);
+  text-align: left;
+}
+
+.change-password-card .card-header h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  position: relative;
+  padding-left: 30px;
+}
+
+.change-password-card .card-header h3::before {
+  content: "\f023"; /* Icon lock từ Font Awesome */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+.change-password-card .card-header p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/* Body của card */
+.change-password-card .card-body {
+  padding: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form label */
+.form-label {
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 25px;
+}
+
+/* Icon cho các trường input */
+.form-group:nth-child(1) .form-label::before {
+  content: "\f084"; /* Icon key cho Mật khẩu hiện tại */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+.form-group:nth-child(2) .form-label::before {
+  content: "\f13e"; /* Icon unlock cho Mật khẩu mới */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+.form-group:nth-child(3) .form-label::before {
+  content: "\f00c"; /* Icon check cho Xác nhận mật khẩu */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+/* Input */
+.password-input-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+
+
+.invalid-feedback {
+  position: absolute;
+  bottom: -20px;
+  font-size: 12px;
+}
+
+.form-control {
+  border-radius: var(--border-radius-base);
+  border: 2px solid var(--border-color-light);
+  padding: 12px 40px 12px 15px; /* Thêm padding-right cho con mắt */
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: var(--card-bg);
+  border-left: 2px solid transparent;
+  width: 100%;
+}
+
+.form-control::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6 !important; /* Giảm độ đậm của placeholder */
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(63, 135, 245, 0.25);
+  outline: none;
+  transform: scale(1.02);
+  border-left-color: var(--primary-color);
+}
+
+.form-control.is-invalid {
+  border-color: #dc3545;
+}
+
+.form-control.is-invalid:focus {
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+  border-left-color: #dc3545;
+}
+
+.invalid-feedback {
+  font-size: 12px;
+  margin-top: 4px;
+  color: #dc3545;
+}
+
+.form-text {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* Nút con mắt */
+.change-password-card .toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.change-password-card .toggle-password:hover,
+.change-password-card .toggle-password:focus {
+  color: var(--primary-color);
+  outline: none;
+}
+
+/* Nút */
+.change-password-card .btn {
+  border-radius: var(--border-radius-base);
+  padding: 10px 20px;
+  font-weight: 500;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.change-password-card .btn-primary {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  border: none;
+}
+
+.change-password-card .btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(63, 135, 245, 0.3);
+}
+
+.change-password-card .btn-secondary {
+  background: #6c757d;
+  border: none;
+}
+
+.change-password-card .btn-secondary:hover {
+  background: #5a6268;
+  transform: translateY(-1px);
+}
+
+/* Alert */
+.change-password-card .alert {
+  border-radius: var(--border-radius-base);
+  border: none;
+  background: linear-gradient(90deg, #f8d7da 0%, rgba(220, 53, 69, 0.1) 100%);
+  color: #721c24;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+/* Spinner */
+.change-password-card .spinner-border {
+  width: 16px;
+  height: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .change-password-card .card-body {
+    padding: 20px;
+  }
+  
+  .change-password-card .d-grid.gap-2.d-md-flex.justify-content-md-end {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .change-password-card .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .change-password-card .btn:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .change-password-card .card-header {
+    padding: 15px;
+  }
+  
+  .change-password-card .card-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .change-password-card .card-body {
+    padding: 15px;
+  }
+  
+  .change-password-card .form-control {
+    padding: 10px 40px 10px 12px;
+    font-size: 16px;
+  }
+  
+  .change-password-card .toggle-password {
+    font-size: 12px;
+  }
+}

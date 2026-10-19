@@ -1,0 +1,15 @@
+meta {
+  name: CreateQDBH
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{localhost_QLNS}}/api/QuyetDinhBH/CreateQDBH
+  body: multipartForm
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

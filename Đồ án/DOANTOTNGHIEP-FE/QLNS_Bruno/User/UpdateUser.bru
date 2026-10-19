@@ -1,0 +1,46 @@
+meta {
+  name: UpdateUser
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{localhost_QLNS}}/api/admin/User/UpdateUser/:id
+  body: multipartForm
+  auth: inherit
+}
+
+params:path {
+  id: 49167cb2-ee74-4cb1-a96f-654c99bb79ca
+}
+
+body:multipart-form {
+  hoTen: Nguyễn Trọng Quý
+  gioiTinh: true
+  ngaySinh: 2/2/2002
+  phongBanID: df752871-6d5b-424c-932b-24b89d612b82
+  soHieu: TP0123
+  chucVuID: 3fa85f64-5717-4562-b3fc-2c963f66afa6
+  ngayBoNhiem: 2/2/2025
+  congViecChinh: quản lý nhân sự
+  email: TrongQuy700@gmail.com
+  diDong: 0989264118
+  lienHeKhanCap: Nguyễn Văn A - 0989264118
+  cccd: 21810310506
+  ngayCap: 2/2/2022
+  noiCap: Hải Dương
+  soBaoHiemYTe: 21810310506
+  thuongTru_TP: 4
+  thuongTru_XP: 10715097
+  thuongTru_CT: Liêu xá, Đại Sơn, Hải Dương
+  noiO_TP: 4
+  noiO_XP: 10715097
+  noiO_CT: Liêu xá, Đại Sơn, Hải Dương
+  ngayVaoLam: 2/2/2025
+  hinhThucXetTuyen: Phỏng vấn
+  maSoThue: 21810310506
+}
+
+settings {
+  encodeUrl: true
+}

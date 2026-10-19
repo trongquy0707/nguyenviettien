@@ -1,0 +1,19 @@
+meta {
+  name: getByIdUser
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{localhost_QLNS}}/api/admin/User/GetByIdUser/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: c0f8baf4-0008-45c1-9a08-b242c180d652
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,15 @@
+meta {
+  name: New Request
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{localhost_QLNS}}/api/admin/Permission/GetAllPermission
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

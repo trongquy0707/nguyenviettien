@@ -1,0 +1,20 @@
+meta {
+  name: GetAllThanhPho
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{localhost_QLNS}}/api/DiaChi/ThanhPho/?pageIndex=1&pageSize=10
+  body: none
+  auth: inherit
+}
+
+params:query {
+  pageIndex: 1
+  pageSize: 10
+}
+
+settings {
+  encodeUrl: true
+}

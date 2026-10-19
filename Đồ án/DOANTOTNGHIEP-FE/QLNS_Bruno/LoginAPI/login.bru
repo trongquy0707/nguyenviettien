@@ -1,0 +1,40 @@
+meta {
+  name: login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{localhost_QLNS}}/api/Login/login
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 
+}
+
+body:json {
+  {
+    "tenDangNhap": "quynt",
+    "matKhau": "1"
+  }
+}
+
+body:multipart-form {
+  TenDangNhap: quynt
+  MatKhau: 1
+}
+
+script:post-response {
+  var jsonData = res.getBody();
+  
+  // Lưu token vào biến môi trường
+  bru.setEnvVar("token_QLNS", jsonData.token);
+  
+  console.log("Token hiện tại:", bru.getEnvVar("token_QLNS"));
+}
+
+settings {
+  encodeUrl: true
+}

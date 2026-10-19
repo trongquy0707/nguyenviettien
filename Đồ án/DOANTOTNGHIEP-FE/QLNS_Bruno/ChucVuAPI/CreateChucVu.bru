@@ -1,0 +1,27 @@
+meta {
+  name: CreateChucVu
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{localhost_QLNS}}/api/ChucVu/CreateChucVu
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "tenChucVu": "admin",
+    "moTa": "quản lý toàn bộ phần mềm"
+  }
+}
+
+body:multipart-form {
+  tenChucVu: admin
+  moTa: Quản lý toàn bộ phần mềm
+}
+
+settings {
+  encodeUrl: true
+}

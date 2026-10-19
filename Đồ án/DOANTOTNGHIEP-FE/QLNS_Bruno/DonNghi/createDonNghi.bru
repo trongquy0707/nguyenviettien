@@ -1,0 +1,27 @@
+meta {
+  name: createDonNghi
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{localhost_QLNS}}/api/DonNghi/CreateDonNghi
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  userID: 49167cb2-ee74-4cb1-a96f-654c99bb79ca
+  hoTen: Nguyễn Trọng Quý
+  chucVuID: 3fa85f64-5717-4562-b3fc-2c963f66afa6
+  phongBanID: df752871-6d5b-424c-932b-24b89d612b82
+  nguoiBanGiaoID: c0f8baf4-0008-45c1-9a08-b242c180d652
+  ngayBatDau: 5/8/2025
+  ngayKetThuc: 7/8/2025
+  soNgayNghi: 3
+  lyDo: Lý do đi chơi với ny 
+}
+
+settings {
+  encodeUrl: true
+}

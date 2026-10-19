@@ -1,0 +1,22 @@
+meta {
+  name: CreateRoleChucVu
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{localhost_QLNS}}/api/admin/RoleChucVu/CreateRoleChucVu
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "roleID": "8f9a21db-d635-4a4d-b1c4-512e6b7ef6e3",
+    "chucVuID": "8ca6d968-6b48-4ed7-bf66-6d276a01bcab"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

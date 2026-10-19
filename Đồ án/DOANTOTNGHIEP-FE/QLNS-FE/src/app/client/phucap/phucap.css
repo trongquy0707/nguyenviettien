@@ -1,0 +1,80 @@
+         .table-wrapper {
+           height: 520px;
+           overflow-y: auto;
+           border: 1px solid #dee2e6;
+         }
+
+         .table-wrapper table {
+           table-layout: auto !important;
+           width: 100%;
+         }
+
+         .table th,
+         .table td {
+           padding: 0.19rem !important;
+         }
+
+         .table th:first-child,
+         .table td:first-child {
+           width: 32px;
+           text-align: center;
+         }
+
+         .table th:last-child,
+         .table td:last-child {
+           width: 72px;
+           padding-left: 9px;
+         }
+
+         .table {
+           width: 100% !important;
+           table-layout: fixed;
+         }
+
+         .table th,
+         .table td {
+           font-size: 15px;
+         }
+
+         .action-buttons {
+           display: flex;
+           gap: 0.15rem;
+           justify-content: center;
+           align-items: center;
+         }
+
+         .btn-custom {
+           font-size: 11px !important;
+           line-height: 1;
+         }
+
+         .btn-custom svg {
+           width: 13px;
+           height: 13px;
+         }
+
+         .pagination-custom .page-item .page-link {
+           padding: 0.1rem 0.4rem;
+           font-size: 12px !important;
+           margin-top: 2px !important;
+         }
+
+         .grid-pagination-fixed {
+           display: flex;
+           justify-content: flex-start;
+           align-items: center;
+         }
+
+         .pagination-dropdown {
+           margin-left: 5px;
+         }
+
+         .dropdown-pagination .btn {
+           font-size: 10px !important;
+           margin-bottom: 12px;
+         }
+
+         h2 {
+           font-size: 19px !important;
+           margin-bottom: 5px !important;
+         }

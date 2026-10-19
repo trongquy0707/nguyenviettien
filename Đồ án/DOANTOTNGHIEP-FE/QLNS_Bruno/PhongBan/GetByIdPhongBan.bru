@@ -1,0 +1,19 @@
+meta {
+  name: GetByIdPhongBan
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{localhost_QLNS}}/api/PhongBan/GetPhongBan/:id
+  body: multipartForm
+  auth: inherit
+}
+
+params:path {
+  id: 7378a165-4b27-430e-b1d5-3a81aab2c2cc
+}
+
+settings {
+  encodeUrl: true
+}

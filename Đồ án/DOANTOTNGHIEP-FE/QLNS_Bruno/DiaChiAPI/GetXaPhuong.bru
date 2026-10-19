@@ -1,0 +1,24 @@
+meta {
+  name: GetXaPhuong
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{localhost_QLNS}}/api/DiaChi/XaPhuong/:id?pageIndex=7&pageSize=15
+  body: none
+  auth: inherit
+}
+
+params:query {
+  pageIndex: 7
+  pageSize: 15
+}
+
+params:path {
+  id: 4
+}
+
+settings {
+  encodeUrl: true
+}

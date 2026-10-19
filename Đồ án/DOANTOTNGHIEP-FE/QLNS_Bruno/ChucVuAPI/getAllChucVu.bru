@@ -1,0 +1,19 @@
+meta {
+  name: getAllChucVu
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{localhost_QLNS}}/api/ChucVu/GetAllChucVu
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token_QLNS}}
+}
+
+settings {
+  encodeUrl: true
+}

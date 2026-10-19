@@ -1,0 +1,25 @@
+meta {
+  name: updatePhongBan
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{localhost_QLNS}}/api/PhongBan/UpdatePhongBan/:id
+  body: multipartForm
+  auth: inherit
+}
+
+params:path {
+  id: 7378a165-4b27-430e-b1d5-3a81aab2c2cc
+}
+
+body:multipart-form {
+  tenPhongBan: Phòng Giải Pháp
+  moTa: sửa mô tả
+  ~id: df752871-6d5b-424c-932b-24b89d612b82
+}
+
+settings {
+  encodeUrl: true
+}

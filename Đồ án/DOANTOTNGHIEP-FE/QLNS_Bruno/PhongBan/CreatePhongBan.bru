@@ -1,0 +1,25 @@
+meta {
+  name: CreatePhongBan
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{localhost_QLNS}}/api/PhongBan/CreatePhongBan
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  ~tenPhongBan: Nhân sự
+  ~moTa: Quản lý nhân viên
+}
+
+body:multipart-form {
+  tenPhongBan: Nhân Sự
+  moTa: Quản lý nhân viên công ty
+}
+
+settings {
+  encodeUrl: true
+}

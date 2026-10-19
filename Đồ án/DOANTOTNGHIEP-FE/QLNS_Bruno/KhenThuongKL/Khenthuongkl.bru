@@ -1,0 +1,29 @@
+meta {
+  name: Khenthuongkl
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{localhost_QLNS}}/api/KhenThuongKyLuat/CreateKTKL
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "bangLuongNVID": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "userID": "f49397bb-4254-4678-9642-a9bb1b38a277",
+    "hinhThuc": true,
+    "soQuyetDinh": "string",
+    "ngayQuyetDinh": "2025-09-15T08:48:08.190Z",
+    "nguoiKy": "string",
+    "lyDo": "string",
+    "thuongPhat": 0,
+    "ghiChu": "string"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

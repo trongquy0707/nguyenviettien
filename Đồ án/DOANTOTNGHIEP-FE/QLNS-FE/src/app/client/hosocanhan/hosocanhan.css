@@ -1,0 +1,213 @@
+:root {
+  --primary-color: #3f87f5;
+  --accent-color: #5cb85c;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --card-bg: #ffffff;
+  --border-color-light: #eeeeee;
+  --bg-page: #f9fafb;
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
+  --border-radius-base: 6px;
+  --font-family-base: "Roboto", sans-serif;
+}
+
+/* Phần bao ngoài trang */
+.profile-page-wrapper {
+  background-color: var(--bg-page);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+}
+
+.profile-content-area {
+  width: 100%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  flex: 1;
+  border: 1px solid #dee2e6;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) var(--border-color-light);
+}
+
+.profile-content-area::-webkit-scrollbar {
+  width: 8px;
+}
+
+.profile-content-area::-webkit-scrollbar-track {
+  background: var(--border-color-light);
+  border-radius: 10px;
+}
+
+.profile-content-area::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  border: 2px solid var(--bg-page);
+}
+
+/* --- Phần Header/Summary (Card chính) --- */
+.profile-summary-card {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background: linear-gradient(90deg, var(--card-bg) 0%, rgba(63, 135, 245, 0.05) 100%);
+  border-radius: var(--border-radius-base);
+  box-shadow: 0 2px 10px var(--shadow-light);
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px var(--shadow-medium);
+}
+
+.summary-avatar-group {
+  display: flex;
+  align-items: center;
+}
+
+.profile-avatar-lg {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 30px;
+  border: 3px solid transparent;
+  background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box, linear-gradient(45deg, #3f87f5, #5cb85c) border-box;
+  box-shadow: 0 0 0 4px rgba(63, 135, 245, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-avatar-lg:hover {
+  transform: scale(1.05);
+}
+
+.summary-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-name {
+  margin: 0 0 5px 0;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.summary-title {
+  margin: 0 0 3px 0;
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.summary-department-code {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/* --- Phần Grid Chi tiết (Body) --- */
+.profile-details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* Thẻ thông tin chi tiết */
+.detail-card {
+  background-color: var(--card-bg);
+  padding: 15px;
+  border-radius: var(--border-radius-base);
+  box-shadow: 0 1px 5px var(--shadow-light);
+  transition: box-shadow 0.3s ease, transform 0.2s ease, border 0.3s ease;
+  height: fit-content;
+  width: 100%;
+  border: 1px solid transparent;
+  background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box, linear-gradient(45deg, rgba(63, 135, 245, 0.1), rgba(92, 184, 92, 0.1)) border-box;
+}
+
+.detail-card:hover {
+  box-shadow: 0 4px 15px var(--shadow-medium);
+  transform: translateY(-2px);
+  border-color: var(--primary-color);
+}
+
+.detail-card-title {
+  font-size: 17.5px;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color-light);
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  position: relative;
+  background: linear-gradient(90deg, transparent 0%, rgba(63, 135, 245, 0.1) 100%);
+  padding-left: 25px;
+}
+
+.detail-card-title::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+/* Gán icon riêng biệt cho từng tiêu đề */
+.detail-card:nth-child(1) .detail-card-title::before { content: "\f007"; } /* Icon user cho Thông tin chung */
+.detail-card:nth-child(2) .detail-card-title::before { content: "\f2b9"; } /* Icon phone cho Thông tin liên hệ */
+.detail-card:nth-child(3) .detail-card-title::before { content: "\f0c1"; } /* Icon file cho Giấy tờ & Ngân hàng */
+.detail-card:nth-child(4) .detail-card-title::before { content: "\f015"; } /* Icon home cho Địa chỉ Thường trú */
+.detail-card:nth-child(5) .detail-card-title::before { content: "\f041"; } /* Icon map cho Địa chỉ Nơi ở hiện tại */
+.detail-card:nth-child(6) .detail-card-title::before { content: "\f0b1"; } /* Icon briefcase cho Công việc trước đây */
+
+/* Layout nội dung 1 cột (từng trường 1 hàng) */
+.detail-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-field {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed var(--border-color-light);
+  font-size: 0.95rem;
+  border-left: 2px solid transparent;
+  transition: border-left 0.3s ease;
+}
+
+.profile-field:hover {
+  border-left-color: var(--primary-color);
+}
+
+.detail-card-content .profile-field:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.profile-label {
+  font-weight: 500;
+  color: var(--text-primary);
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.profile-value {
+  color: var(--text-secondary);
+  text-align: right;
+  word-break: break-word;
+  font-weight: 400;
+}
+
+/* Thẻ full-width (dành cho Địa chỉ) */
+.detail-card-full {
+  grid-column: 1 / -1;
+}

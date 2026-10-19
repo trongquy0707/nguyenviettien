@@ -1,0 +1,23 @@
+meta {
+  name: CreatePermission
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{localhost_QLNS}}/api/admin/Permission/CreatePermission
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "code": "KhenThuongKyLuat.GetAllKTKL",
+    "tenQuyen": "Lấy danh sách khen thưởng kỷ luật",
+    "moTa": "lấy tất cả danh sách khen thưởng kỷ luật"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,28 @@
+meta {
+  name: CreateHopdong
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{localhost_QLNS}}/api/admin/HopDong/CreateHopDong
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "userID": "03f3f473-0a51-45c9-901f-475664d61d4f",
+    "isLoaiHD": false,
+    "mucLuong": 100000000,
+    "trangthaihopdong": 0,
+    "ngayBatDau": "2025-10-26T07:23:18.004Z",
+    "ngayKetThuc": "2025-10-26T07:23:18.005Z",
+    "ngayKy": "2025-10-26T07:23:18.005Z"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

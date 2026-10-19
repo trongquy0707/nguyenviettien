@@ -1,0 +1,19 @@
+meta {
+  name: importfile
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{localhost_QLNS}}/api/admin/BangChamCong/import
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  file: @file(/C:/Users/ADMIN/Downloads/ChamCongThang6.xlsx)
+}
+
+settings {
+  encodeUrl: true
+}

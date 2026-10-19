@@ -1,0 +1,19 @@
+meta {
+  name: Xuatfile
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{localhost_QLNS}}/api/DonNghi/XuatFileDonNghi/:id
+  body: multipartForm
+  auth: inherit
+}
+
+params:path {
+  id: 42a55509-85b1-4fea-8e20-1b81c4420d5d
+}
+
+settings {
+  encodeUrl: true
+}

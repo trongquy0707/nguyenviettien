@@ -1,0 +1,15 @@
+meta {
+  name: GetAllUser
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{localhost_QLNS}}/api/User/GetAllUser
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

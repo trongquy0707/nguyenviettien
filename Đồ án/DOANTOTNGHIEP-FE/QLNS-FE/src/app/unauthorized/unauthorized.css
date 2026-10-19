@@ -1,0 +1,23 @@
+
+.unauthorized-container {
+  display: flex;
+  justify-content: center;
+    align-items: center;
+ height: 100vh;
+}
+.unauthorized-box{
+    text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.unauthorized-box h1 {
+  color: #dc3545;
+  margin-bottom: 15px;
+}
+
+.unauthorized-box p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}

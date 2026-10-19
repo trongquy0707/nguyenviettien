@@ -1,0 +1,27 @@
+meta {
+  name: CretaeChucVuPermisson
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{localhost_QLNS}}/api/admin/ChucVuPermission/CreateChucVuPermission
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "chuVuID": "8ca6d968-6b48-4ed7-bf66-6d276a01bcab",
+    "permissionID": "3837165d-5c64-4177-9dfa-8f9e7a8a7480"
+  }
+}
+
+body:multipart-form {
+  chuVuID: 2e944369-5be5-409d-9bbb-316b103da0a0
+  permissionID: e7f42702-3ed9-44c3-9a24-597b96db4deb
+}
+
+settings {
+  encodeUrl: true
+}
